@@ -60,17 +60,20 @@
 .form-group .checkbox-wapper {
     color: var(--ligth-grey);
     margin: 32px 0;
-    position: relative;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.form-group .checkbox-wapper span {
-    position: absolute;
-    right: 0;
+.form-group .checkbox-wapper input[type="checkbox"] {
+    margin-right: 4px;
 }
 
 .form-group .btn-wapper {
     display: flex;
+    flex-direction: column;
     gap: 12px;
     align-items: center;
     justify-content: center;
@@ -96,4 +99,16 @@
 .form-group .btn-wapper .btn-secondary {
     background-color: transparent;
     border: 2px solid var(--ligth-text);
+}
+
+@media (min-width: 768px) {
+    .form-group .btn-wapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .form-group .checkbox-wapper {
+        flex-direction: row;
+        justify-content: space-between;
+    } 
 }
