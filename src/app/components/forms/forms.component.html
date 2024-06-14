@@ -1,31 +1,35 @@
-<form class="form-group">
-    <div class="form-icon">
-        <img src="../../../assets/images/png/icon-hour.png" alt="Clock Icon" />
-        Horário
+<form class="form-group" [formGroup]="form">
+  <div class="form-icon">
+    <img src="../../../assets/images/png/icon-hour.png" alt="Clock Icon" />
+    Horário
+  </div>
+  <h3>Qual horário você quer treinar?</h3>
+  <div class="radio-wapper">
+    <input type="radio" name="hour" value="morning" formControlName="hour" />
+    <label for="morning">Manhã</label>
+    <span>00:06 às 12:00</span>
+  </div>
+  <div class="radio-wapper">
+    <input type="radio" name="hour" value="afternoon" formControlName="hour" />
+    <label for="afternoon">Tarde</label>
+    <span>12:01 às 18:00</span>
+  </div>
+  <div class="radio-wapper">
+    <input type="radio" name="hour" value="night" formControlName="hour" />
+    <label for="night">Noite</label>
+    <span>18:01 às 22:00</span>
+  </div>
+  <div class="checkbox-wapper">
+    <div class="checkbox">
+      <input type="checkbox" name="showClosed" formControlName="showClosed" />
+      <label for="showClosed">Exibir unidades fechadas</label>
     </div>
-    <h3>Qual horário você quer treinar?</h3>
-    <div class="radio-wapper">
-        <input type="radio" name="morning" value="morning">
-        <label for="morning">Manhã</label>
-        <span>00:06 às 12:00</span>
-    </div>
-    <div class="radio-wapper">
-        <input type="radio" name="afternoon" value="afternoon">
-        <label for="afternoon">Tarde</label>
-        <span>12:01 às 18:00</span>
-    </div>
-    <div class="radio-wapper">
-        <input type="radio" name="night" value="night">
-        <label for="night">Noite</label>
-        <span>18:01 às 22:00</span>
-    </div>
-    <div class="checkbox-wapper">
-        <input type="checkbox" name="show-closed">
-        <label for="show-closed">Exibir unidades fechadas</label>
-        <span>Resultados encontrados: {{ results.length }}</span>
-    </div>
-    <div class="btn-wapper">
-        <button class="btn btn-primary">Encontrar unidade</button>
-        <button class="btn btn-secondary">Limpar</button>
-    </div>
+    <span>Resultados encontrados: {{ results.length }}</span>
+  </div>
+  <div class="btn-wapper">
+    <button class="btn btn-primary" (click)="onSubmit()">
+      Encontrar unidade
+    </button>
+    <button class="btn btn-secondary" (click)="onClean()">Limpar</button>
+  </div>
 </form>
