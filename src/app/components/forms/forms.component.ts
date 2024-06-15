@@ -30,15 +30,15 @@ export class FormsComponent implements OnInit {
 
   loadAllUnitis() {
     this.unitService.getAllUnitss().subscribe(data => {
-      this.results = data.locations;
-      this.filtredResults = data.locations;
-    }
-    );
+      this.results = data;
+      this.filtredResults = data;
+    });
   }
 
   onSubmit() {
     let { hour, showClosed } = this.form.value;
-   this.filtredResults = this.filterService.filtrer(this.results, showClosed, hour);
+    this.filtredResults = this.filterService.filtrer(this.results, showClosed, hour);
+    this.unitService.setFilteredUnits(this.filtredResults);
   }
 
   onClean() {
