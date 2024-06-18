@@ -10,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CardsListComponent } from './components/cards-list/cards-list.component';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from './components/card/card.component';
-import { LegensComponent } from './components/legens/legens.component';
+import { LegendsComponent } from './components/legends/legends.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { LegensComponent } from './components/legens/legens.component';
     FormsComponent,
     CardsListComponent,
     CardComponent,
-    LegensComponent,
+    LegendsComponent,
     ],
     imports: [
       BrowserModule,
