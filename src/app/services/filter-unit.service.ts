@@ -66,8 +66,8 @@ export class FilterUnitService {
   filtrer(results: Locations[], showClosed: boolean, hour: string) {
     let intermadiateResults = results;
 
-    if (showClosed) {
-      intermadiateResults = results.filter(location => !location.opened === true);
+    if (!showClosed) {
+      intermadiateResults = results.filter(location => location.opened === true);
     }
 
     if (hour) {
