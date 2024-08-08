@@ -7,7 +7,6 @@ import { AppComponent } from './app/app.component';
 import { CommonModule } from '@angular/common';
 import { withInterceptorsFromDi, provideHttpClient } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app/app-routing.module';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 
 if (environment.production) {
@@ -16,7 +15,7 @@ if (environment.production) {
 
 bootstrapApplication(AppComponent, {
     providers: [
-        importProvidersFrom(BrowserModule, AppRoutingModule, ReactiveFormsModule, CommonModule),
+        importProvidersFrom(BrowserModule, ReactiveFormsModule, CommonModule),
         provideHttpClient(withInterceptorsFromDi())
     ]
 })
