@@ -1,13 +1,15 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { FilterUnitService } from 'src/app/services/filter-unit.service';
 import { GetUnitsService } from 'src/app/services/get-units.service';
 import { Locations } from 'src/app/types/locations.interface';
 
 @Component({
-  selector: 'app-forms',
-  templateUrl: './forms.component.html',
-  styleUrls: ['./forms.component.scss']
+    selector: 'app-forms',
+    templateUrl: './forms.component.html',
+    styleUrls: ['./forms.component.scss'],
+    standalone: true,
+    imports: [ReactiveFormsModule]
 })
 export class FormsComponent implements OnInit {
   @Output() submitEvent = new EventEmitter();

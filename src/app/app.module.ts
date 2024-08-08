@@ -14,23 +14,21 @@ import { LegendsComponent } from './components/legends/legends.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FormsComponent,
-    CardsListComponent,
-    CardComponent,
-    LegendsComponent,
-    FooterComponent,
-    ],
+    declarations: [AppComponent],
     imports: [
-      BrowserModule,
-      AppRoutingModule,
-      ReactiveFormsModule,
-      HttpClientModule, 
-      CommonModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        CommonModule,
+        HeaderComponent,
+        FormsComponent,
+        CardsListComponent,
+        CardComponent,
+        LegendsComponent,
+        FooterComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
