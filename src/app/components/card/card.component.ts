@@ -1,13 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Locations } from 'src/app/types/locations.interface';
-import { NgClass, NgIf, NgFor } from '@angular/common';
+import { NgClass } from '@angular/common';
 
 @Component({
     selector: 'app-card',
     templateUrl: './card.component.html',
     styleUrls: ['./card.component.scss'],
     standalone: true,
-    imports: [NgClass, NgIf, NgFor]
+    imports: [NgClass]
 })
 export class CardComponent implements OnInit {
   @Input() card!: Locations;

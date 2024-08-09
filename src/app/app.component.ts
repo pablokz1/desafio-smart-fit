@@ -4,7 +4,7 @@ import { Locations } from './types/locations.interface';
 import { GetUnitsService } from './services/get-units.service';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardsListComponent } from './components/cards-list/cards-list.component';
-import { NgIf, AsyncPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { LegendsComponent } from './components/legends/legends.component';
 import { FormsComponent } from './components/forms/forms.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -14,7 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
     standalone: true,
-    imports: [HeaderComponent, FormsComponent, LegendsComponent, NgIf, CardsListComponent, FooterComponent, AsyncPipe]
+    imports: [HeaderComponent, FormsComponent, LegendsComponent, CardsListComponent, FooterComponent, AsyncPipe]
 })
 export class AppComponent {
   showList = new BehaviorSubject<boolean>(false);
