@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "desafio-smart-fit:build:production"
+              "buildTarget": "desafio-smart-fit:build:production"
             },
             "development": {
-              "browserTarget": "desafio-smart-fit:build:development"
+              "buildTarget": "desafio-smart-fit:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "desafio-smart-fit:build"
+            "buildTarget": "desafio-smart-fit:build"
           }
         },
         "test": {
